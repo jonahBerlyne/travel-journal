@@ -1,27 +1,22 @@
 export default function Main ({data}) {
 
- // For data:
- // imageUrl on left
- // on right, text columns
- // col 1: location, googleMapsUrl
- // col 2: title
- // col 3: startDate-endDate
- // col 4: description
- console.log(data);
-
  return (
-  <main>
+  <main className="main">
    {data.map(item => {
     return (
      <div key={item.id} className="item">
       <div>
-       <img className="img" src={`${item.imageUrl}`} alt="Mount Fuji"/>
+       <img className="img" src={`${item.imageUrl}`} alt={`${item.title}`}/>
       </div>
-      <div>
-       <p>{item.location} <a href={`${item.googleMapsUrl}`}>View on Google Maps</a></p>
-       <h1>{item.title}</h1>
-       <h4>{item.startDate}-{item.endDate}</h4>
-       <p>{item.description}</p>
+      <div className="content">
+       <header className="header">
+        <img className="location--icon" src="./images/locationIcon.jpeg"/>
+        <p className="location"> {item.location.toUpperCase()} </p>
+        <a href={`${item.googleMapsUrl}`} className="link--style">View on Google Maps</a>
+       </header>
+       <h1 className="title">{item.title}</h1>
+       <h4 className="dates">{item.startDate} - {item.endDate}</h4>
+       <p className="description">{item.description}</p>
       </div>
      </div>
     );
