@@ -17,3 +17,14 @@ body {
  max-width: 100px;
 }
 
+.item {
+ display: flex;
+ gap: 20px;
+}
+
+.img {
+ height: 300px;
+ width: 250px;
+ margin: 10px 10px 10px 10px;
+ border-radius: 10px;
+}

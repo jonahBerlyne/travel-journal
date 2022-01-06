@@ -13,12 +13,16 @@ export default function Main ({data}) {
   <main>
    {data.map(item => {
     return (
-     <div key={item.id}>
-      <img src={`${item.imageUrl}`} alt="Mount Fuji"/>
-      <p>{item.location} <a href={`${item.googleMapsUrl}`}>View on Google Maps</a></p>
-      <h1>{item.title}</h1>
-      <h4>{item.startDate}-{item.endDate}</h4>
-      <p>{item.description}</p>
+     <div key={item.id} className="item">
+      <div>
+       <img className="img" src={`${item.imageUrl}`} alt="Mount Fuji"/>
+      </div>
+      <div>
+       <p>{item.location} <a href={`${item.googleMapsUrl}`}>View on Google Maps</a></p>
+       <h1>{item.title}</h1>
+       <h4>{item.startDate}-{item.endDate}</h4>
+       <p>{item.description}</p>
+      </div>
      </div>
     );
    })}
