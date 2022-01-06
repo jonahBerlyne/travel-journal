@@ -1,7 +1,11 @@
+import Navbar from "./Navbar";
+import Main from "./Main";
+
 export default function App() {
   return (
     <div className="App">
-      Travel
+      <Navbar/>
+      <Main/>
     </div>
   );
 }

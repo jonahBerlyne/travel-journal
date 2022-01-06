@@ -1,0 +1,18 @@
+* {
+ box-sizing: border-box;
+}
+
+body {
+ margin: 0;
+}
+
+.Navbar {
+ background-color: crimson;
+ display: flex;
+ height: 70px;
+ padding: 20px 36px;
+}
+
+.nav--logo {
+ max-width: 100px;
+}
